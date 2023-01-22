@@ -1,0 +1,9 @@
+.characters-block{
+    width: 96vw;
+    margin: 5px 5px 5px 5px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
