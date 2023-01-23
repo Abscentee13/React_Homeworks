@@ -1,10 +1,10 @@
 
 const USERS_URL =() => {return  'https://jsonplaceholder.typicode.com/users'};
 
-const UserDataFromJsonPlaceholder = () =>
+const UserData = () =>
 {
 //// TO DO catch exception, when offline
-    const usersList = {};
+    const usersList = [];
     fetch(USERS_URL())
         .then((response) => ((response.ok?response.json(): document.write('sorry, online data is not available'))))//that is not work catch exception
         .then ((data) => {
@@ -18,4 +18,4 @@ const UserDataFromJsonPlaceholder = () =>
     );
 }
 
-export {UserDataFromJsonPlaceholder};
+export {UserData};

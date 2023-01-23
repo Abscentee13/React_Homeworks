@@ -1,14 +1,12 @@
 import {UserBlock} from "../user/user.js";
-import {UserDataFromJsonPlaceholder} from './usersInitData';
+import {UserData} from './usersInitData';
 import './users.css';
 
-
 const Users = () => {
-
     return (
-        <div className="characters-block">
+        <div >
             {
-                UserDataFromJsonPlaceholder.map(user => <UserBlock key={user.id} user={user}/>)
+                UserData().map(user => <UserBlock key={user.id} user={user}/>)
             }
         </div>
     );
