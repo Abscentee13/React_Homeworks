@@ -1,7 +1,7 @@
 import './user.css';
 
 import {ButtonDetails} from "../buttonDetails/buttonDetails";
-import {Post} from "../posts/posts";
+import {PostsBlock} from "../posts/posts";
 
 
 const UserBlock =  ({user}) => {
@@ -40,7 +40,7 @@ const UserBlock =  ({user}) => {
              </div>
 
              <ButtonDetails key={'button' + user.id} id={id}/>
-             <Post key={'posts' + user.id} id={id}/>
+             <PostsBlock key={'posts' + user.id} id={id}/>
 
          </div>
     );
