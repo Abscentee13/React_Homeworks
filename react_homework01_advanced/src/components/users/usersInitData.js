@@ -7,7 +7,7 @@ import {useEffect, useState} from "react";
  const UserData =  () =>
 {
     const USERS_URL =() => {return  'https://jsonplaceholder.typicode.com/users'};
-    const [usersList, setUsers] = useState ([]);
+    const [usersData, setUsers] = useState ([]);
 
     useEffect(() => {
         fetch(USERS_URL())
@@ -15,7 +15,7 @@ import {useEffect, useState} from "react";
             .then (data => setUsers(data))
     }, []);
 
-    return (usersList);
+    return (usersData);
 }
 
 export {UserData};
