@@ -6,7 +6,7 @@ const Users = () => {
 
     const users = UserData();
             return (
-                <div>
+                <div className="main-content">
                     {
                         users.map(user => <UserBlock key={user.id} user={user}/>)
                     }
