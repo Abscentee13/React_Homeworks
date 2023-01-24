@@ -7,20 +7,21 @@ const UserBlock =  ({user}) => {
 
     return (
          <div className="user-block">
+             <div className="user-block__user-data-header">
                 <div className="user-block__user-data-field"> id: {id} </div>
                 <div className="user-block__user-data-field"> name: {name}</div>
                 <div className="user-block__user-data-field"> username: {username}</div>
                 <div className="user-block__user-data-field"> email: {email}</div>
 
-                <div className="user-block__user-data-field"> address:
-                    <div> street: {address['street']}</div>
-                    <div> suite: {address['suite']}</div>
-                    <div> city: {address['city']}</div>
-                    <div> zipcode: {address['zipcode']}</div>
+                <div className="user-block__user-data-header"> address:
+                    <div className="user-block__user-data-field"> street: {address['street']}</div>
+                    <div className="user-block__user-data-field"> suite: {address['suite']}</div>
+                    <div className="user-block__user-data-field"> city: {address['city']}</div>
+                    <div className="user-block__user-data-field"> zipcode: {address['zipcode']}</div>
 
-                    <div> geo:
-                        <div> lat: {address['geo']['lat']}</div>
-                        <div> lng: {address['geo']['lng']}</div>
+                    <div className="user-block__user-data-header"> geo:
+                        <div className="user-block__user-data-field"> lat: {address['geo']['lat']}</div>
+                        <div className="user-block__user-data-field"> lng: {address['geo']['lng']}</div>
                     </div>
 
                  </div>
@@ -28,12 +29,13 @@ const UserBlock =  ({user}) => {
                 <div className="user-block__user-data-field"> phone: {phone}</div>
                 <div className="user-block__user-data-field"> website: {website}</div>
 
-                <div className="user-block__user-data-field"> company:
-                    <div> company Name: {company['companyName']}</div>
-                    <div> catchPhrase: {company['catchPhrase']}</div>
-                    <div> bs: {company['bs']}</div>
+                <div className="user-block__user-data-header"> company:
+                    <div className="user-block__user-data-field"> company Name: {company['name']}</div>
+                    <div className="user-block__user-data-field"> catchPhrase: {company['catchPhrase']}</div>
+                    <div className="user-block__user-data-field"> bs: {company['bs']}</div>
                 </div>
 
+             </div>
          </div>
     );
 };
