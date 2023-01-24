@@ -1,6 +1,7 @@
 import './user.css';
 
 import {ButtonDetails} from "../buttonDetails/buttonDetails";
+import {UserPost} from "../userpost/userpost";
 
 
 const UserBlock =  ({user}) => {
@@ -8,7 +9,7 @@ const UserBlock =  ({user}) => {
     const {id, name, username, email, address, phone, website, company} = user;
 
     return (
-         <div className="user-block">
+         <div className="user-block" id={'user' + id}>
              <div className="user-block__user-data-header">
                 <div className="user-block__user-data-field"> id: {id} </div>
                 <div className="user-block__user-data-field"> name: {name}</div>
@@ -38,11 +39,11 @@ const UserBlock =  ({user}) => {
                 </div>
              </div>
 
-             <ButtonDetails/>
-             <div>
-                 jnbdklsdjnbvkjbsd
-             </div>
+             <ButtonDetails key={'button' + user.id} id={id}/>
+             <UserPost key={'posts' + user.id} id={id}/>
+
          </div>
     );
 };
+
 export {UserBlock};
