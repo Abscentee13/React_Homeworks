@@ -1,21 +1,21 @@
 
-const USERS_URL =() => {return  'https://jsonplaceholder.typicode.com/users'};
+import {useEffect, useState} from "react";
 
-const UserData = () =>
+
+
+
+ const UserData =  () =>
 {
-//// TO DO catch exception, when offline
-    const usersList = [];
-    fetch(USERS_URL())
-        .then((response) => ((response.ok?response.json(): document.write('sorry, online data is not available'))))//that is not work catch exception
-        .then ((data) => {
-            for (const datum of data) {
-                usersList.push(datum);
-            }
-        });
+    const USERS_URL =() => {return  'https://jsonplaceholder.typicode.com/users'};
+    const [usersList, setUsers] = useState ([]);
 
-    return (
-            usersList
-    );
+    useEffect(() => {
+        fetch(USERS_URL())
+            .then(data => data.json())
+            .then (data => setUsers(data))
+    }, []);
+
+    return (usersList);
 }
 
 export {UserData};
