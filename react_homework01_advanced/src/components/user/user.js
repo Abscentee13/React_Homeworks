@@ -1,5 +1,7 @@
 import './user.css';
 
+import {ButtonDetails} from "../buttonDetails/buttonDetails";
+
 
 const UserBlock =  ({user}) => {
 
@@ -34,7 +36,11 @@ const UserBlock =  ({user}) => {
                     <div className="user-block__user-data-field"> catchPhrase: {company['catchPhrase']}</div>
                     <div className="user-block__user-data-field"> bs: {company['bs']}</div>
                 </div>
+             </div>
 
+             <ButtonDetails/>
+             <div>
+                 jnbdklsdjnbvkjbsd
              </div>
          </div>
     );
