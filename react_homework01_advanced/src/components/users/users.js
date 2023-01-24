@@ -1,6 +1,7 @@
-import {UserBlock} from "../user/user.js";
-import {UserData} from './usersInitData';
 import './users.css';
+
+import {UserBlock} from "../user/user";
+import {UserData} from './usersInitData';
 
 const Users = () => {
 

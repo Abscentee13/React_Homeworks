@@ -41,7 +41,6 @@ const UserBlock =  ({user}) => {
 
              <ButtonDetails key={'button' + user.id} id={id}/>
              <PostsBlock key={'posts' + user.id} id={id}/>
-
          </div>
     );
 };

@@ -15,6 +15,7 @@ const ButtonDetails = ({id}) => {
 
     }
 
+
     return (
             <input type="button" value="➦" className = "button_detail" onClick={(e) => checkUserPost(id)}/>
     );
